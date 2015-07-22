@@ -88,6 +88,7 @@ ninja.wallets.vanitywallet = {
 					alert(ninja.translator.get("vanityalertinvalidinputprivatekeysmatch"));
 				}
 				else {
+					combinedPrivateKey.setCompressed(true);
 					bitcoinAddress = combinedPrivateKey.getBitcoinAddress();
 					privateKeyWif = combinedPrivateKey.getBitcoinWalletImportFormat();
 					publicKeyHex = combinedPrivateKey.getPubKeyHex();
