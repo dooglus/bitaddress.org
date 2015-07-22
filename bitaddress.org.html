@@ -5670,7 +5670,7 @@ Bitcoin.ECKey = (function () {
 	/**
 	* Whether public keys should be returned compressed by default.
 	*/
-	ECKey.compressByDefault = false;
+	ECKey.compressByDefault = true;
 
 	/**
 	* Set whether the public key should be returned compressed or not.
@@ -6636,7 +6636,7 @@ body, html { height: 99%; }
 					<div id="bulkcommands" class="row">
 						<span><label id="bulklabelstartindex" for="bulkstartindex">Start index:</label> <input type="text" id="bulkstartindex" value="1" /></span>
 						<span><label id="bulklabelrowstogenerate" for="bulklimit">Rows to generate:</label> <input type="text" id="bulklimit" value="3" /></span>
-						<span><label id="bulklabelcompressed" for="bulkcompressed">Compressed addresses?</label> <input type="checkbox" id="bulkcompressed" /></span>
+						<span><label id="bulklabelcompressed" for="bulkcompressed">Compressed addresses?</label> <input type="checkbox" id="bulkcompressed" checked="checked" /></span>
 						<span><input type="button" id="bulkgenerate" value="Generate" onclick="ninja.wallets.bulkwallet.buildCSV(document.getElementById('bulklimit').value * 1, document.getElementById('bulkstartindex').value * 1, document.getElementById('bulkcompressed').checked);" /> </span>
 						<span class="print"><input type="button" name="print" id="bulkprint" value="Print" onclick="window.print();" /></span>
 					</div>
@@ -9750,7 +9750,6 @@ ninja.wallets.vanitywallet = {
 					alert(ninja.translator.get("vanityalertinvalidinputprivatekeysmatch"));
 				}
 				else {
-					combinedPrivateKey.setCompressed(true);
 					bitcoinAddress = combinedPrivateKey.getBitcoinAddress();
 					privateKeyWif = combinedPrivateKey.getBitcoinWalletImportFormat();
 					publicKeyHex = combinedPrivateKey.getPubKeyHex();
