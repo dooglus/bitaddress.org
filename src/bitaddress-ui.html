@@ -155,6 +155,10 @@
 			<div id="seedpooldisplay"></div>
 		</div>
 
+		<div id="seedSkipper">
+			<p>You may safely <a href="#" class="nicerButton" style="width: 100px;" onClick="ninja.seeder.seedCount = ninja.seeder.seedLimit; ninja.seeder.seed();">skip this step</a> if you do not need to use the random wallet generator.</p>
+		</div>
+
 		<div id="wallets">
 			<div id="singlearea" class="walletarea">
 				<div class="commands">
@@ -232,7 +236,7 @@
 							<span id="bulklabelq1">Why should I use a Bulk Wallet to accept CLAMs on my website?</span>
 							<div id="bulke1" class="more"></div>
 						</div>
-						<div id="bulka1" class="answer">The traditional approach to accepting CLAMs on your website requires that you install the official CLAM client daemon ("CLAMd"). Many website hosting packages don't support installing the CLAM daemon. Also, running the CLAM daemon on your web server means your private keys are hosted on the server and could get stolen if your web server is hacked. When using a Bulk Wallet you can upload only the CLAM addresses and not the private keys to your web server. Then you don't have to worry about your CLAM wallet being stolen if your web server is hacked. </div>
+						<div id="bulka1" class="answer">The traditional approach to accepting CLAMs on your website requires that you install the official CLAM client daemon ("clamd"). Many website hosting packages don't support installing the CLAM daemon. Also, running the CLAM daemon on your web server means your private keys are hosted on the server and could get stolen if your web server is hacked. When using a Bulk Wallet you can upload only the CLAM addresses and not the private keys to your web server. Then you don't have to worry about your CLAM wallet being stolen if your web server is hacked. </div>
 					</div>
 					<div id="bulkfaq2" class="faq"> 
 						<div id="bulkq2" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(2);">

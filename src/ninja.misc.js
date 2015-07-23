@@ -101,6 +101,7 @@ ninja.seeder = {
 	        ninja.tab.select(walletType)
 	    }
 	    document.getElementById("generate").style.display = "none";
+	    document.getElementById("seedSkipper").style.display = "none";
 	    // update labels for dependent wallets
 	    var culture = (ninja.getQueryString()["culture"] == null ? "en" : ninja.getQueryString()["culture"]);
 	    ninja.translator.translate(culture);
@@ -221,10 +222,12 @@ ninja.tab = {
             if (ninja.seeder.isStillSeeding == false || walletType == "brainwallet" || walletType == "detailwallet") {
             	walletTab.className += " selected";
             	document.getElementById("generate").style.display = "none";
+            	document.getElementById("seedSkipper").style.display = "none";
                 ninja.wallets[walletTab.getAttribute("id")].open();
             }
             else if (ninja.seeder.isStillSeeding == true && !(walletType == "brainwallet" || walletType == "detailwallet")) {
                 document.getElementById("generate").style.display = "block";
+                document.getElementById("seedSkipper").style.display = "block";
             }
         }
     },
