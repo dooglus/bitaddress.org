@@ -231,3 +231,38 @@ body, html { height: 99%; }
 	#seedpoolarea { display: none; }
 	.faq { display: none; }
 }
+		.nicerButton { /* thanks http://www.cssbuttongenerator.com */
+			-moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+			-webkit-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+			box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+			background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+			background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dce2c', endColorstr='#8cb82b');
+			background-color:#9dce2c;
+			-webkit-border-top-left-radius:12px;
+			-moz-border-radius-topleft:12px;
+			border-top-left-radius:12px;
+			-webkit-border-top-right-radius:12px;
+			-moz-border-radius-topright:12px;
+			border-top-right-radius:12px;
+			-webkit-border-bottom-right-radius:12px;
+			-moz-border-radius-bottomright:12px;
+			border-bottom-right-radius:12px;
+			-webkit-border-bottom-left-radius:12px;
+			-moz-border-radius-bottomleft:12px;
+			border-bottom-left-radius:12px;
+			text-indent:0;
+			border:1px solid #83c41a;
+			display:inline-block;
+			color:#ffffff !important;
+			font-family:Arial;
+			font-size:14px;
+			font-weight:bold;
+			font-style:normal;
+			height:35px;
+			line-height:35px;
+			width:189px;
+			text-decoration:none;
+			text-align:center;
+			text-shadow:1px 1px 0px #689324;
+		}
