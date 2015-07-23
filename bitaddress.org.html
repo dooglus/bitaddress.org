@@ -7393,7 +7393,12 @@ ninja.seeder = {
 		div.setAttribute("class", "seedpoint");
 		div.style.top = y + "px";
 		div.style.left = x + "px";
-		document.body.appendChild(div);
+
+		// for some reason, appending these divs to an IOS device breaks clicking altogether (?)
+		if (navigator.platform != 'iPad' && navigator.platform != 'iPhone' && navigator.platform != 'iPod') {
+			document.body.appendChild(div);
+		}
+
 		ninja.seeder.seedPoints.push(div);
 	},
 
